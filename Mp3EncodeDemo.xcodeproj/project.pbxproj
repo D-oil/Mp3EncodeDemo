@@ -18,6 +18,11 @@
 		214B2F1817780F1500C1F211 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 214B2F1717780F1500C1F211 /* Default-568h@2x.png */; };
 		214B2F1B17780F1500C1F211 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214B2F1A17780F1500C1F211 /* ViewController.m */; };
 		214B2F1E17780F1500C1F211 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214B2F1C17780F1500C1F211 /* ViewController.xib */; };
+		214B2F6917780FBD00C1F211 /* Recorder.m in Sources */ = {isa = PBXBuildFile; fileRef = 214B2F6817780FBD00C1F211 /* Recorder.m */; };
+		214B2F6C17780FDC00C1F211 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 214B2F6A17780FD400C1F211 /* AudioToolbox.framework */; };
+		214B2F6F177810EF00C1F211 /* Mp3EncodeOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 214B2F6E177810EF00C1F211 /* Mp3EncodeOperation.m */; };
+		214B2F721778151300C1F211 /* Mp3EncodeClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 214B2F711778151300C1F211 /* Mp3EncodeClient.m */; };
+		7646F9CD1CBF939700B48977 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 7646F9CC1CBF939700B48977 /* libmp3lame.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,15 @@
 		214B2F1917780F1500C1F211 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		214B2F1A17780F1500C1F211 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		214B2F1D17780F1500C1F211 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		214B2F6717780FBD00C1F211 /* Recorder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Recorder.h; sourceTree = "<group>"; };
+		214B2F6817780FBD00C1F211 /* Recorder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Recorder.m; sourceTree = "<group>"; };
+		214B2F6A17780FD400C1F211 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		214B2F6D177810EF00C1F211 /* Mp3EncodeOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3EncodeOperation.h; sourceTree = "<group>"; };
+		214B2F6E177810EF00C1F211 /* Mp3EncodeOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3EncodeOperation.m; sourceTree = "<group>"; };
+		214B2F701778151300C1F211 /* Mp3EncodeClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mp3EncodeClient.h; sourceTree = "<group>"; };
+		214B2F711778151300C1F211 /* Mp3EncodeClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Mp3EncodeClient.m; sourceTree = "<group>"; };
+		7646F9CB1CBF939700B48977 /* lame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = lame.h; sourceTree = "<group>"; };
+		7646F9CC1CBF939700B48977 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +58,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7646F9CD1CBF939700B48977 /* libmp3lame.a in Frameworks */,
+				214B2F6C17780FDC00C1F211 /* AudioToolbox.framework in Frameworks */,
 				214B2F0217780F1500C1F211 /* UIKit.framework in Frameworks */,
 				214B2F0417780F1500C1F211 /* Foundation.framework in Frameworks */,
 				214B2F0617780F1500C1F211 /* CoreGraphics.framework in Frameworks */,
@@ -56,6 +72,7 @@
 		214B2EF517780F1500C1F211 = {
 			isa = PBXGroup;
 			children = (
+				214B2F2417780F3F00C1F211 /* libmp3lame */,
 				214B2F0717780F1500C1F211 /* Mp3EncodeDemo */,
 				214B2F0017780F1500C1F211 /* Frameworks */,
 				214B2EFF17780F1500C1F211 /* Products */,
@@ -73,6 +90,7 @@
 		214B2F0017780F1500C1F211 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				214B2F6A17780FD400C1F211 /* AudioToolbox.framework */,
 				214B2F0117780F1500C1F211 /* UIKit.framework */,
 				214B2F0317780F1500C1F211 /* Foundation.framework */,
 				214B2F0517780F1500C1F211 /* CoreGraphics.framework */,
@@ -89,6 +107,12 @@
 				214B2F1A17780F1500C1F211 /* ViewController.m */,
 				214B2F1C17780F1500C1F211 /* ViewController.xib */,
 				214B2F0817780F1500C1F211 /* Supporting Files */,
+				214B2F6D177810EF00C1F211 /* Mp3EncodeOperation.h */,
+				214B2F6E177810EF00C1F211 /* Mp3EncodeOperation.m */,
+				214B2F6717780FBD00C1F211 /* Recorder.h */,
+				214B2F6817780FBD00C1F211 /* Recorder.m */,
+				214B2F701778151300C1F211 /* Mp3EncodeClient.h */,
+				214B2F711778151300C1F211 /* Mp3EncodeClient.m */,
 			);
 			path = Mp3EncodeDemo;
 			sourceTree = "<group>";
@@ -105,6 +129,15 @@
 				214B2F1717780F1500C1F211 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		214B2F2417780F3F00C1F211 /* libmp3lame */ = {
+			isa = PBXGroup;
+			children = (
+				7646F9CB1CBF939700B48977 /* lame.h */,
+				7646F9CC1CBF939700B48977 /* libmp3lame.a */,
+			);
+			path = libmp3lame;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +209,9 @@
 				214B2F0E17780F1500C1F211 /* main.m in Sources */,
 				214B2F1217780F1500C1F211 /* AppDelegate.m in Sources */,
 				214B2F1B17780F1500C1F211 /* ViewController.m in Sources */,
+				214B2F6917780FBD00C1F211 /* Recorder.m in Sources */,
+				214B2F6F177810EF00C1F211 /* Mp3EncodeOperation.m in Sources */,
+				214B2F721778151300C1F211 /* Mp3EncodeClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -258,9 +294,15 @@
 		214B2F2217780F1500C1F211 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mp3EncodeDemo/Mp3EncodeDemo-Prefix.pch";
 				INFOPLIST_FILE = "Mp3EncodeDemo/Mp3EncodeDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libmp3lame",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -269,9 +311,15 @@
 		214B2F2317780F1500C1F211 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ENABLE_BITCODE = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Mp3EncodeDemo/Mp3EncodeDemo-Prefix.pch";
 				INFOPLIST_FILE = "Mp3EncodeDemo/Mp3EncodeDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libmp3lame",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -296,6 +344,7 @@
 				214B2F2317780F1500C1F211 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

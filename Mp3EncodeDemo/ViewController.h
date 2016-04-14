@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Mp3EncodeClient.h"
 
 @interface ViewController : UIViewController
+{
+    UIButton *sayBeginBtn;
+    UIButton *sayEndBtn;
+    
+    Mp3EncodeClient *mp3EncodeClient;
+}
+
 
 @end
